@@ -179,3 +179,27 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+
+#agregue esto para continuar
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+build/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+
+# ASIR / Networking
+*.log
+*.swp
+.env
+EOF
+
+#debo ordenarlo , use el archivo de otro repo que tenia asi que agregue las excepciones para el de redes

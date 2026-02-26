@@ -1,0 +1,9 @@
+# Crear el entorno virtual
+python -m venv .venv
+
+# Activar el entorno (Windows)
+.venv\Scripts\activate
+
+# Actualizar pip e instalar dependencias
+python -m pip install --upgrade pip
+pip install netmiko
