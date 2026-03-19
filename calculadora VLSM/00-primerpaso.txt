@@ -1,0 +1,43 @@
+# 1. Crear el entorno virtual (venv) para aislar las librerías
+python -m venv .venv
+
+# 2. Activar el entorno
+# En Windows:
+.venv\Scripts\activate
+# En Linux/macOS:
+source .venv/bin/activate
+
+#si sale error por problemas de admin
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+.\.venv\Scripts\activate
+
+
+# 3. Actualizar pip e instalar librerías base para ASIR
+pip install --upgrade pip
+python -m pip install --upgrade pip   ##esta si la de atras no funciona
+pip install netmiko scapy ruff ipython
+
+# 4. Crear archivo de requerimientos para el portfolio
+pip freeze > requirements.txt
+
+# 5. Crear el archivo .gitignore profesional (Cópialo tal cual)
+cat <<EOF > .gitignore
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+build/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+
+# ASIR / Networking
+*.log
+*.swp
+.env
+EOF
